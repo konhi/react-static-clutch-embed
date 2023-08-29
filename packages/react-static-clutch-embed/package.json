@@ -1,7 +1,6 @@
 {
   "name": "react-static-clutch-embed",
   "version": "1.0.1",
-  "private": true,
   "devDependencies": {
     "eslint-config-custom": "workspace:*",
     "react-html-props": "^2.0.3",
