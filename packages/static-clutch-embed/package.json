@@ -17,5 +17,9 @@
   },
   "dependencies": {
     "jsdom": "^22.1.0"
+  },
+  "repository": {
+    "url": "https://github.com/konhi/react-static-clutch-embed",
+    "type": "git"
   }
 }

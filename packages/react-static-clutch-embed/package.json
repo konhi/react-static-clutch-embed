@@ -12,5 +12,9 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "static-clutch-embed": "workspace:*"
+  },
+  "repository": {
+    "url": "https://github.com/konhi/react-static-clutch-embed",
+    "type": "git"
   }
 }
