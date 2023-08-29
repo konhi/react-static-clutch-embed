@@ -1,0 +1,1 @@
+export const BASE_BADGE_WIDGET_URL = "https://widget.clutch.co/widgets/get/2/lightbg" as const;

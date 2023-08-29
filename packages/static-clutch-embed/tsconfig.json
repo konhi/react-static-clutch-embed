@@ -1,0 +1,5 @@
+{
+  "extends": "tsconfig/static-clutch-embed.json",
+  "include": ["**/*.ts"],
+  "exclude": ["node_modules"]
+}

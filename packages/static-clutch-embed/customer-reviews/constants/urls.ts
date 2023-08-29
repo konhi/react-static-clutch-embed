@@ -1,0 +1,1 @@
+export const BASE_CUSTOMER_REVIEWS_WIDGET_URL = "https://widget.clutch.co/widgets/get/8" as const;

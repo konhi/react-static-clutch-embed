@@ -1,0 +1,48 @@
+.clutch-badge {
+  --font-family: "Roboto", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
+  --color-accent: #e62415;
+  --color-text: #212529;
+  --color-text-secondary: #17313b;
+  --color-text-tertiary: #6a7a7e;
+  --color-background: #fafafa;
+  --color-background-card: #ffffff;
+  line-height: 1.4;
+}
+
+.clutch-badge > a {
+  text-decoration: none;
+  color: var(--color-text-tertiary);
+}
+
+.clutch-badge {
+  font-family: var(--font-family);
+  color: var(--color-text);
+  padding: 16px;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.clutch-reviews-count {
+  display: grid;
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-align: left;
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: var(--color-text-tertiary);
+  gap: 4px;
+}
+
+.clutch-reviewed-on {
+  display: grid;
+  gap: 4px;
+  color: var(--color-text-tertiary);
+  font-size: 11px;
+  letter-spacing: 1px;
+  margin: 0 0 5px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
