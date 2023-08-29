@@ -15,9 +15,23 @@
   </p>
 </div>
 
+## ❤️ Install
+```
+npm install react-static-clutch-embed static-clutch-embed
+pnpm install react-static-clutch-embed static-clutch-embed
+yarn install react-static-clutch-embed static-clutch-embed
+```
+
+| 📦 Package | 🌎 Environment | ? Description |
+|----------|----------|--------------|
+| static-clutch-embed | Node.js • Edge | API for widgets |
+| react-static-clutch-embed | Browser | Pre-made React Components for widgets |
+
 ## 🤖 Example Uses
 
 ### ▲ Next.js with pre-made component and server-side fetching
+
+👉 See the [working example.](https://react-static-clutch-embed-konhi.vercel.app/)
 
 ```tsx
 import type { InferGetStaticPropsType } from "next/types";
