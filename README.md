@@ -7,13 +7,24 @@
       <b>Save +400 KBs (network) & +250 ms (rendering) while embeding Clutch.co widgets.</b>
     <br>
     <br>
-    <a href="#-lets-talk">💬 Let's talk</a>
-    ·
-    <a href="https://github.com/konhi/poland-public-transport-api/blob/main/CONTRIBUTING.MD">🖥 Contribute & Use</a>
-    ·
-    <a href="https://github.com/konhi/poland-public-transport-api/issues">✨ Request Feature</a>
   </p>
 </div>
+
+## 🦄 Features
+
+- **💨 Instant Performance Improvement** — get rid off network requests (incl. fonts, assets, iframe — +400 KBs) and rendering (+250 ms)
+- **▲ Perfect for SSR** — data fetching & React components are modularized, in order to leverage things like Next.js' getStaticProps or Server-side Components
+- **📦 Ready Out-of-the-box** — use pre-built React components to instantly optimize your site
+- **✨ Fully Headless & Customizable** — use API to get JSON data for full control on styles & behavior
+- **🛡️ Fully Type-Safe & Parsed with Zod** — no unexpected behavior due to runtime type checking
+- **🔗 Respects Clutch Analytics** — links have same UTM & other params
+
+## 🔗 Supported Widgets
+
+| Name | API | React Component | Image |
+|-----|------|-----------------|-------|
+| Customer Reviews | ✅ | ✅ | ![](https://github.com/konhi/react-static-clutch-embed/assets/61631665/ed718776-9dc6-441a-9f56-7550c88001cc) |
+| Badge | ✅ | ✅ | ![](https://github.com/konhi/react-static-clutch-embed/assets/61631665/01e68bc1-d6e1-45fa-9d2c-bdec05335568) |
 
 ## ❤️ Install
 ```
@@ -22,16 +33,17 @@ pnpm install react-static-clutch-embed static-clutch-embed
 yarn install react-static-clutch-embed static-clutch-embed
 ```
 
+## 📦 Packages 
 | 📦 Package | 🌎 Environment | ? Description |
 |----------|----------|--------------|
-| static-clutch-embed | Node.js • Edge | API for widgets |
-| react-static-clutch-embed | Browser | Pre-made React Components for widgets |
+| [static-clutch-embed](https://www.npmjs.com/package/static-clutch-embed) | Node.js | API for widgets |
+| [react-static-clutch-embed](https://www.npmjs.com/package/react-static-clutch-embed) | Browser | Pre-built React Components for widgets |
 
 ## 🤖 Example Uses
 
 ### ▲ Next.js with pre-made component and server-side fetching
 
-👉 See the [working example.](https://react-static-clutch-embed-konhi.vercel.app/)
+👉 See the [working example.](https://react-static-clutch-embed-web.vercel.app/)
 
 ```tsx
 import type { InferGetStaticPropsType } from "next/types";
