@@ -5,6 +5,18 @@ import { WidgetParams } from "../types/widgets";
 import { badgeWidgetDataSchema, type BadgeWidgetData } from "./types";
 import { getElements } from "../utils/querying";
 
+/**
+ * @example
+    {
+      rating: 4.9,
+      reviewsCount: 15,
+      links: {
+        stars: 'https://clutch.co/profile/appunite?utm_source=widget&utm_medium=2&utm_campaign=widget&utm_content=stars&utm_term=appunite.com#reviews',
+        logo: 'https://clutch.co/profile/appunite?utm_source=widget&utm_medium=2&utm_campaign=widget&utm_content=logo&utm_term=appunite.com',
+        reviewsCount: 'https://clutch.co/profile/appunite?utm_source=widget&utm_medium=2&utm_campaign=widget&utm_content=num_reviews&utm_term=appunite.com#reviews'
+      }
+    }
+*/
 export const getBadgeData = async (
   params: WidgetParams
 ): Promise<BadgeWidgetData> => {

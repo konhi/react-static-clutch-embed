@@ -16,6 +16,66 @@ import {
 import { ReviewsWidgetData, reviewsWidgetDataSchema } from "./types";
 import { MAX_REVIEWS_PER_PAGE } from "./constants/other";
 
+/**
+ * @example
+ * {
+    company: {
+      name: 'AppUnite',
+      rating: 4.9,
+      reviewsCount: 15,
+      links: {
+        title: 'https://clutch.co/profile/appunite?utm_source=widget&utm_medium=8&utm_campaign=widget&utm_content=title&utm_term=appunite.com#summary',
+        logo: 'https://clutch.co/profile/appunite?utm_source=widget&utm_medium=3&utm_campaign=widget&utm_content=stars&utm_term=appunite.com#logo',
+        stars: 'https://clutch.co/profile/appunite?utm_source=widget&utm_medium=8&utm_campaign=widget&utm_content=stars&utm_term=appunite.com#reviews',
+        reviewsCount: 'https://clutch.co/profile/appunite?utm_source=widget&utm_medium=8&utm_campaign=widget&utm_content=num_reviews&utm_term=appunite.com#reviews'
+      }
+    },
+    reviews: [
+      {
+        id: 1999329,
+        rating: 5,
+        text: "This was a very fruitful collaboration that we're fully satisfied with.",
+        author: 'Director of Engineering, Contractbook',
+        link: 'https://clutch.co/profile/appunite?utm_source=widget&utm_medium=8&utm_campaign=widget&utm_content=testimonial&utm_term=appunite.com#reviews#review-1999329'
+      },
+      {
+        id: 1574954,
+        rating: 5,
+        text: 'They’re a team of very intelligent engineers.',
+        author: 'CEO, Bamboo',
+        link: 'https://clutch.co/profile/appunite?utm_source=widget&utm_medium=8&utm_campaign=widget&utm_content=testimonial&utm_term=appunite.com#reviews#review-1574954'
+      },
+      {
+        id: 1503564,
+        rating: 5,
+        text: 'No complaints, we loved working with AppUnite 100%.',
+        author: 'CEO, Solo ',
+        link: 'https://clutch.co/profile/appunite?utm_source=widget&utm_medium=8&utm_campaign=widget&utm_content=testimonial&utm_term=appunite.com#reviews#review-1503564'
+      },
+      {
+        id: 1113680,
+        rating: 5,
+        text: 'I needed smart people who cared about what we were doing, and they delivered.',
+        author: 'CTO, Halftone Design',
+        link: 'https://clutch.co/profile/appunite?utm_source=widget&utm_medium=8&utm_campaign=widget&utm_content=testimonial&utm_term=appunite.com#reviews#review-1113680'
+      },
+      {
+        id: 1052297,
+        rating: 5,
+        text: 'Everything AppUnite does is gold.',
+        author: 'CEO, Yogatrail',
+        link: 'https://clutch.co/profile/appunite?utm_source=widget&utm_medium=8&utm_campaign=widget&utm_content=testimonial&utm_term=appunite.com#reviews#review-1052297'
+      },
+      {
+        id: 951374,
+        rating: 4,
+        text: 'The team was open about everything. We could always have honest conversations with them.',
+        author: 'CTO, ASSISTME',
+        link: 'https://clutch.co/profile/appunite?utm_source=widget&utm_medium=8&utm_campaign=widget&utm_content=testimonial&utm_term=appunite.com#reviews#review-951374'
+      }
+    ]
+}
+ */
 export const getReviewsData = async (
   params: WidgetParams
 ): Promise<ReviewsWidgetData> => {

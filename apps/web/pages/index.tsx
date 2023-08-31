@@ -1,6 +1,6 @@
 import type { InferGetStaticPropsType } from "next/types";
 
-import { getReviewsData, getBadgeData } from "static-clutch-embed";
+import { getReviewsData, getBadgeData, WidgetParams } from "static-clutch-embed";
 import { ClutchBadge, ClutchReviews } from "react-static-clutch-embed";
 
 /* Import styles for pre-made components */
@@ -26,7 +26,7 @@ export default function Page({
 /* Fetch data on server side in order to render components statically */
 export const getStaticProps = async () => {
   /* You can extract these from URL, in this case from: https://widget.clutch.co/widgets/get/8?ref_domain=appunite.com&uid=33218&ref_path=/ */
-  const widgetParams = {
+  const widgetParams: WidgetParams = {
     uid: 33218,
     ref_path: "/",
     ref_domain: "appunite.com",
