@@ -30,7 +30,7 @@
 ```
 npm install react-static-clutch-embed static-clutch-embed
 pnpm install react-static-clutch-embed static-clutch-embed
-yarn install react-static-clutch-embed static-clutch-embed
+yarn add react-static-clutch-embed static-clutch-embed
 ```
 
 ## 📦 Packages 
