@@ -4,7 +4,7 @@
 <h1 align="center">▲ React Static Clutch Embed </h1>
 
   <p align="center">
-      <b>Save +400 KBs (network) & +250 ms (rendering) while embeding Clutch.co widgets.</b>
+      <b>Say goodbye to iframes! Save +400 KBs (network) & +250 ms (rendering) while embeding Clutch.co widgets.</b>
     <br>
     <br>
   </p>
