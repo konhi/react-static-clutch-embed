@@ -92,6 +92,119 @@ export const getStaticProps = async () => {
 };
 ```
 
+## ⭐️ Usage
+
+### static-clutch-embed
+#### interface WidgetParams
+```ts
+import type { WidgetParams } from "static-clutch-embed";
+
+// You can extract these from URL, in this case from: https://widget.clutch.co/widgets/get/8?ref_domain=appunite.com&uid=33218&ref_path=/
+const widgetParams: WidgetParams = {
+ uid: 33218,
+ ref_path: "/",
+ ref_domain: "appunite.com",
+};
+```
+#### const getReviewsData: (params: WidgetParams) => Promise<ReviewsWidgetData>
+
+```ts
+import { getReviewsData } from "static-clutch-embed";
+
+const customerReviewsData = await getReviewsData(widgetParams);
+
+/*
+{
+  company: {
+    name: 'AppUnite',
+    rating: 4.9,
+    reviewsCount: 15,
+    links: {
+      title: 'https://clutch.co/profile/appunite?utm_source=widget&utm_medium=8&utm_campaign=widget&utm_content=title&utm_term=appunite.com#summary',
+      logo: 'https://clutch.co/profile/appunite?utm_source=widget&utm_medium=3&utm_campaign=widget&utm_content=stars&utm_term=appunite.com#logo',
+      stars: 'https://clutch.co/profile/appunite?utm_source=widget&utm_medium=8&utm_campaign=widget&utm_content=stars&utm_term=appunite.com#reviews',
+      reviewsCount: 'https://clutch.co/profile/appunite?utm_source=widget&utm_medium=8&utm_campaign=widget&utm_content=num_reviews&utm_term=appunite.com#reviews'
+    }
+  },
+  reviews: [
+    {
+      id: 1999329,
+      rating: 5,
+      text: "This was a very fruitful collaboration that we're fully satisfied with.",
+      author: 'Director of Engineering, Contractbook',
+      link: 'https://clutch.co/profile/appunite?utm_source=widget&utm_medium=8&utm_campaign=widget&utm_content=testimonial&utm_term=appunite.com#reviews#review-1999329'
+    },
+    {
+      id: 1574954,
+      rating: 5,
+      text: 'They’re a team of very intelligent engineers.',
+      author: 'CEO, Bamboo',
+      link: 'https://clutch.co/profile/appunite?utm_source=widget&utm_medium=8&utm_campaign=widget&utm_content=testimonial&utm_term=appunite.com#reviews#review-1574954'
+    },
+    {
+      id: 1503564,
+      rating: 5,
+      text: 'No complaints, we loved working with AppUnite 100%.',
+      author: 'CEO, Solo ',
+      link: 'https://clutch.co/profile/appunite?utm_source=widget&utm_medium=8&utm_campaign=widget&utm_content=testimonial&utm_term=appunite.com#reviews#review-1503564'
+    },
+    {
+      id: 1113680,
+      rating: 5,
+      text: 'I needed smart people who cared about what we were doing, and they delivered.',
+      author: 'CTO, Halftone Design',
+      link: 'https://clutch.co/profile/appunite?utm_source=widget&utm_medium=8&utm_campaign=widget&utm_content=testimonial&utm_term=appunite.com#reviews#review-1113680'
+    },
+    {
+      id: 1052297,
+      rating: 5,
+      text: 'Everything AppUnite does is gold.',
+      author: 'CEO, Yogatrail',
+      link: 'https://clutch.co/profile/appunite?utm_source=widget&utm_medium=8&utm_campaign=widget&utm_content=testimonial&utm_term=appunite.com#reviews#review-1052297'
+    },
+    {
+      id: 951374,
+      rating: 4,
+      text: 'The team was open about everything. We could always have honest conversations with them.',
+      author: 'CTO, ASSISTME',
+      link: 'https://clutch.co/profile/appunite?utm_source=widget&utm_medium=8&utm_campaign=widget&utm_content=testimonial&utm_term=appunite.com#reviews#review-951374'
+    }
+  ]
+}
+*/
+```
+
+#### const getBadgeData: (params: WidgetParams) => Promise<BadgeWidgetData>
+```ts
+import { getBadgeData } from "static-clutch-embed";
+
+const badgeData = await getBadgeData(widgetParams);
+
+/*
+{
+  rating: 4.9,
+  reviewsCount: 15,
+  links: {
+    stars: 'https://clutch.co/profile/appunite?utm_source=widget&utm_medium=2&utm_campaign=widget&utm_content=stars&utm_term=appunite.com#reviews',
+    logo: 'https://clutch.co/profile/appunite?utm_source=widget&utm_medium=2&utm_campaign=widget&utm_content=logo&utm_term=appunite.com',
+    reviewsCount: 'https://clutch.co/profile/appunite?utm_source=widget&utm_medium=2&utm_campaign=widget&utm_content=num_reviews&utm_term=appunite.com#reviews'
+  }
+}
+*/
+```
+
+### react-static-clutch-embed
+
+```tsx
+import { ClutchBadge, ClutchReviews } from "react-static-clutch-embed";
+
+import "react-static-clutch-embed/styles/reviews.css";
+import "react-static-clutch-embed/styles/badge.css";
+
+<ClutchReviews data={customerReviewsData} />
+<ClutchBadge data={badgeData} />
+```
+
 ## 📜 License
 
 - Distributed under the MIT License. See [`LICENSE.txt`](https://github.com/konhi/react-static-clutch-embed/blob/main/LICENSE) for more information.
