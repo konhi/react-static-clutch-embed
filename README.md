@@ -21,10 +21,10 @@
 
 ## 🔗 Supported Widgets
 
-| Name | API | React Component | Image |
-|-----|------|-----------------|-------|
-| Customer Reviews | ✅ | ✅ | ![](https://github.com/konhi/react-static-clutch-embed/assets/61631665/ed718776-9dc6-441a-9f56-7550c88001cc) |
-| Badge | ✅ | ✅ | ![](https://github.com/konhi/react-static-clutch-embed/assets/61631665/01e68bc1-d6e1-45fa-9d2c-bdec05335568) |
+| ID | Name | API | React Component | Image |
+|-----|-----|------|-----------------|-------|
+| 2 | Badge | ✅ | ✅ | ![](https://github.com/konhi/react-static-clutch-embed/assets/61631665/01e68bc1-d6e1-45fa-9d2c-bdec05335568) |
+| 8 | Customer Reviews | ✅ | ✅ | ![](https://github.com/konhi/react-static-clutch-embed/assets/61631665/ed718776-9dc6-441a-9f56-7550c88001cc) |
 
 ## ❤️ Install
 ```
