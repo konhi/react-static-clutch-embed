@@ -1,5 +1,24 @@
 {
-  "extends": "tsconfig/static-clutch-embed.json",
-  "include": ["**/*.ts"],
-  "exclude": ["node_modules"]
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "Static Clutch Embed",
+  "compilerOptions": {
+    "composite": false,
+    "declarationMap": true,
+    "inlineSources": false,
+    "isolatedModules": true,
+    "moduleResolution": "node",
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "preserveWatchOutput": true,
+    "skipLibCheck": true,
+    "target": "ESNext",
+    "module": "ESNext",
+    "strict": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "outDir": "./dist/esm",
+    "declaration": true
+  },
+  "exclude": ["node_modules"],
+  "include": ["./src"]
 }

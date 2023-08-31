@@ -13,12 +13,12 @@ import {
   parseCompanyName,
   parseCompanyRating,
 } from "./utils/parsing-utils";
-import { CustomerReviewsWidgetData } from "./types";
+import { ReviewsWidgetData, reviewsWidgetDataSchema } from "./types";
 import { MAX_REVIEWS_PER_PAGE } from "./constants/other";
 
 export const getReviewsData = async (
   params: WidgetParams
-): Promise<CustomerReviewsWidgetData> => {
+): Promise<ReviewsWidgetData> => {
   const url = getCustomerReviewsWidgetFrameUrl(params);
 
   const { window } = await JSDOM.fromURL(url);
@@ -46,7 +46,7 @@ export const getReviewsData = async (
     SELECTORS_CUSTOMER_REVIEWS.reviewLink,
   ]).map((el) => [...el]);
 
-  const data: CustomerReviewsWidgetData = {
+  const data = reviewsWidgetDataSchema.parse({
     company: {
       name: parseCompanyName(companyName),
       rating: parseCompanyRating(companyRating),
@@ -59,13 +59,13 @@ export const getReviewsData = async (
       },
     },
     reviews: [...Array(MAX_REVIEWS_PER_PAGE).keys()].map((index) => ({
-      id: getReviewId(parseLink(link[index])),
+      id: getReviewId(parseLink(link[index]) ?? ""),
       rating: parseReviewRating(ratings[index]),
       text: parseReviewText(texts[index]),
       author: parseReviewAuthor(authors[index]),
       link: parseLink(link[index]),
     })),
-  };
+  });
 
   return data;
 };

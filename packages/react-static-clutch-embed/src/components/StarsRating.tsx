@@ -1,6 +1,6 @@
 import type { SVGProps } from "react-html-props";
 import { StarIconEmpty, StarIconFilled } from "../assets/StarIcons";
-import { CustomerReviewsWidgetData } from "static-clutch-embed";
+import { ReviewsWidgetData } from "static-clutch-embed";
 import { STAR_RATINGS_STEPS } from "../constants";
 
 interface StarIconProps extends SVGProps {
@@ -8,7 +8,7 @@ interface StarIconProps extends SVGProps {
 }
 
 interface StarsRatingProps
-  extends Pick<CustomerReviewsWidgetData["company"], "rating"> {
+  extends Pick<ReviewsWidgetData["company"], "rating"> {
   starProps?: StarIconProps;
 }
 

@@ -3,20 +3,13 @@
   "display": "Static Clutch Embed",
   "extends": "./base.json",
   "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "strict": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
-    "isolatedModules": true,
-    "moduleResolution": "node",
-    "preserveWatchOutput": true,
-    "skipLibCheck": true,
-    "declaration": false,
-    "declarationMap": false,
-    "jsx": "preserve",
-    "lib": ["dom", "dom.iterable", "esnext"],
-    "noEmit": true,
-    "resolveJsonModule": true,
-    "strict": false
+    "outDir": "./dist",
+    "declaration": true
   },
-  "include": ["src"],
   "exclude": ["node_modules"]
 }

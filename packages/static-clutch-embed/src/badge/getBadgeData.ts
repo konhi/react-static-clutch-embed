@@ -2,7 +2,7 @@ import { SELECTORS_BADGE } from "./constants/badge-selectors";
 import { getBadgeWidgetFrameUrl } from "./utils/badge-urls-utils";
 import { JSDOM } from "jsdom";
 import { WidgetParams } from "../types/widgets";
-import type { BadgeWidgetData } from "./badge-types";
+import { badgeWidgetDataSchema, type BadgeWidgetData } from "./types";
 import { getElements } from "../utils/querying";
 
 export const getBadgeData = async (
@@ -21,15 +21,15 @@ export const getBadgeData = async (
     SELECTORS_BADGE.linkStars,
   ]);
 
-  const data: BadgeWidgetData = {
+  const data = badgeWidgetDataSchema.parse({
     rating: Number(ratingNumber.textContent),
-    reviewsCount: Number(reviewsCount.textContent.split("reviews")[0]), 
+    reviewsCount: Number(reviewsCount.textContent?.split("reviews")[0]), 
     links: {
       reviewsCount: reviewsCount.getAttribute("href"),
       logo: linkLogo.getAttribute("href"),
       stars: linkStars.getAttribute("href"),
     }
-  };
+  });
 
   return data;
 };

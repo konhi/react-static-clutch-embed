@@ -1,4 +1,4 @@
-import type { CustomerReviewsWidgetData } from "static-clutch-embed";
+import type { ReviewsWidgetData } from "static-clutch-embed";
 import { ClutchLogo } from "../../assets/ClutchLogo";
 import { StarsRating } from "../../components/StarsRating";
 import { VerifiedLogo } from "../../assets/VerifiedLogo";
@@ -6,7 +6,7 @@ import { ArrowLeftIcon } from "../../assets/ArrowLeftIcon";
 import { useCarousel } from "../hooks/use-carousel";
 
 interface CustomerReviewsProps {
-  data: CustomerReviewsWidgetData;
+  data: ReviewsWidgetData;
 }
 
 const MOBILE_CAROUSEL_REVIEWS_PER_SCREEN = 2 as const;

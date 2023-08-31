@@ -1,14 +1,31 @@
 {
   "name": "react-static-clutch-embed",
   "version": "1.1.0",
+  "main": "./dist/esm/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "type": "module",
+  "files": [
+    "dist/",
+    "styles/"
+  ],
+  "scripts": {
+    "dev": "pnpm run build -- --watch",
+    "build": "tsup",
+    "prepublishOnly": "npm run build"
+  },
+  "sideEffects": false,
   "devDependencies": {
+    "@types/node": "^17.0.12",
     "eslint-config-custom": "workspace:*",
     "react-html-props": "^2.0.3",
     "tsconfig": "workspace:*",
-    "typescript": "^4.5.3"
+    "tsup": "^7.2.0",
+    "typescript": "^5.2.2"
   },
   "dependencies": {
     "@types/react": "^18.0.22",
+    "esbuild": "^0.19.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "static-clutch-embed": "workspace:*"

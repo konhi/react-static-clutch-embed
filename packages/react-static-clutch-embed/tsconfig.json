@@ -1,5 +1,28 @@
 {
-  "extends": "tsconfig/react-static-clutch-embed.json",
-  "include": ["**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules"]
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "React Static Clutch Embed",
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "sourceMap": true,
+    "types": ["node"],
+    "lib": ["ES2015", "DOM"],
+    "baseUrl": "./",
+    "outDir": "./dist",
+    "declaration": true,
+    "composite": false,
+    "declarationMap": true,
+    "inlineSources": false,
+    "isolatedModules": true,
+    "moduleResolution": "node",
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "preserveWatchOutput": true,
+    "skipLibCheck": true,
+    "target": "ESNext",
+    "module": "ESNext",
+    "strict": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true
+  },
+  "include": ["src"]
 }
