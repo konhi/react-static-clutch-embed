@@ -1,5 +1,11 @@
 # static-clutch-embed
 
+## 1.2.1
+
+### Patch Changes
+
+- add comments
+
 ## 1.2.0
 
 ### Minor Changes

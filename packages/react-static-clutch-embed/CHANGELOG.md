@@ -1,5 +1,13 @@
 # react-static-clutch-embed
 
+## 1.2.1
+
+### Patch Changes
+
+- add comments
+- Updated dependencies
+  - static-clutch-embed@1.2.1
+
 ## 1.2.0
 
 ### Minor Changes
