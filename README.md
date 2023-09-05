@@ -72,8 +72,28 @@ export default function Page({
   return (
     <>
       Reviews
+      {/**
+        Previously, it would be:
+          <Script
+            id="clutch-widget"
+            src="https://widget.clutch.co/static/js/widget.js"
+            strategy="afterInteractive"
+          />
+          <div
+            className={clsx('clutch-widget', styles.clutchWidget)}
+            data-url="https://widget.clutch.co"
+            data-widget-type="8"
+            data-expandifr="true"
+            data-height="auto"
+            data-clutchcompany-id="33218"
+          />
+      */}
       <ClutchReviews data={customerReviewsData} />
       Badge
+      {/**
+        Previously, it would be:
+        <iframe src="https://widget.clutch.co/widgets/get/2/darkbg?ref_domain=appunite.com&uid=33218" />
+      */}
       <ClutchBadge data={badgeData} />
     </>
   );
