@@ -1,5 +1,11 @@
 # react-static-clutch-embed
 
+## 1.2.3
+
+### Patch Changes
+
+- 7fe5e21: fix: light logo on light theme
+
 ## 1.2.2
 
 ### Patch Changes
