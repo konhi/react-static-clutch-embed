@@ -1,5 +1,11 @@
 # react-static-clutch-embed
 
+## 1.2.2
+
+### Patch Changes
+
+- add dark theme for badge
+
 ## 1.2.1
 
 ### Patch Changes

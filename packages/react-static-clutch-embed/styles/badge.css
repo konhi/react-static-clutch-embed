@@ -11,6 +11,14 @@
   line-height: 1.4;
 }
 
+.clutch-badge--dark {
+  --color-accent: #e62415;
+  --color-text: #fff;
+  --color-text-secondary: #104f79;
+  --color-text-tertiary: #fff;
+  --color-background: transparent;
+}
+
 .clutch-badge a {
   text-decoration: none;
   color: var(--color-text-tertiary);
