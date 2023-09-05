@@ -18,9 +18,7 @@ export default function Page({
       Reviews
       <ClutchReviews data={customerReviewsData} />
       Badge
-      <ClutchBadge data={badgeData} style={{
-        theme: "dark"
-      }} />
+      <ClutchBadge data={badgeData} />
     </>
   );
 }

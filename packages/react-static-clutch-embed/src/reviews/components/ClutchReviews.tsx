@@ -51,7 +51,7 @@ export const ClutchReviews = ({ data }: CustomerReviewsProps) => {
         </div>
         <div className="clutch-powered-by clutch-powered-by--desktop">
           <a href={data.company.links.logo} target="_blank">
-            Powered by <ClutchLogo style={{ width: "64px" }} />
+            Powered by <ClutchLogo style={{ width: "64px" }} theme="light" />
           </a>
         </div>
       </div>
@@ -104,7 +104,7 @@ export const ClutchReviews = ({ data }: CustomerReviewsProps) => {
       </div>
       <div className="clutch-powered-by clutch-powered-by--mobile">
         <a href={data.company.links.logo} target="_blank">
-          Powered by <ClutchLogo style={{ width: "48px" }} />
+          Powered by <ClutchLogo style={{ width: "48px" }} theme="light" />
         </a>
       </div>
     </div>
